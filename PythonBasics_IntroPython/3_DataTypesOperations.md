@@ -100,6 +100,7 @@ f"{day}'s breakfast is {eggs} eggs and {bacon} pieces of bacon."
 - .find() - finds the location of one string within another string (a substring). .find(<sub>) returns the index of the first occurrence of the string passed to it.
 - .replace() - replaces each instance of a substring with another string. .replace(<old>, <new>)
 
----
-
-## Numbers and Math
+#### Additional Resources
+-[ Python 3's f-strings: An Improved String Formatting Syntax](https://realpython.com/courses/python-3-f-strings-improved-string-formatting-syntax/)
+- [Splitting, Concatenating, and Joining Strings in Python](https://realpython.com/courses/splitting-concatenating-and-joining-strings-python/)
+- [Reading Input and Output in Python](https://realpython.com/courses/reading-input-writing-output-python/)

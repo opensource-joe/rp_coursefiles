@@ -1,5 +1,5 @@
 # 4.4 - Interact With User Input
-# Solutions to review exercies
+# Solutions to review exercises
 
 
 # Exercise 1

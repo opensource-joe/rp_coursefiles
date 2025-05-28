@@ -31,7 +31,6 @@ Multiline strings:
     2. Use triple quotes as delimiters (""" or ''').
 
 ### Concatenating, Indexing, and Slicing
-
 Concatenation - joins two strings together.
 - Concatenate with a "+" symbol. ```string1 + string2```
 
@@ -57,9 +56,49 @@ Slicing - gets several characters from a string at once.
 Strings are immutable - cannot change once they are created. To alter a string, you must create a new one through assignment.
 
 ### Manipulating Strings with String Methods
+- Built in methods are known as dot methods.
 
+- .lower() - converts all chr in str to lowercase letters.
+- .upper() - converts all chr in str to upper case.
 
+- .rstrip() - removes trailing spaces from right side of string.
+- .lstrip() - removes trailing spaces from left side of string.
+- .strip() - removes whitespaces from both left and right sides.
 
+- .startswith() - determine if a string starts with a particular string.
+- .endswith() - determine if a string ends with a particular string.
+
+### Interacting with User Input
+Using input() to interact with the user.
+
+### Working with Strings and Numbers
+Using Strings with Arithmetic Operators:
+- The + operator concatenates two strings together.
+- The * operator concatenates multiple copies of a string.
+
+Converting Strings to Numbers:
+- int() - converts objects into whole numbers.
+- float() - converts objects into numbers with decimal points.
+
+Converting Numbers to Strings:
+- str() - returns a string version of an object.
+
+### Streamlining Your Print
+Formatted string literals commonly known as f-strings.
+- A string literal with the letter f before the opening quotation mark.
+- Variable names surrounded by curly braces {} are replaced by their corresponding values without using str().
+
+```python
+day = "Tuesday"
+eggs = 2
+bacon = 3
+
+f"{day}'s breakfast is {eggs} eggs and {bacon} pieces of bacon."
+```
+
+### Finding a String in a String
+- .find() - finds the location of one string within another string (a substring). .find(<sub>) returns the index of the first occurrence of the string passed to it.
+- .replace() - replaces each instance of a substring with another string. .replace(<old>, <new>)
 
 ---
 

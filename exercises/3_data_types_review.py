@@ -1,55 +1,93 @@
 # String Data Type
 
 # 1. Print a string that uses double quotation marks inside the string.
+# print("This is a string!")
 
 # 2. Print a string that uses an apostrophe inside the string.
+# print("This isn't messing up with the apostrophe.")
 
 # 3. Print a string that spans multiple lines with whitespace preserved.
+# print("This is a message \
+#             with whitespace \
+#       and multiple lines.")
 
 # 4. Print a string that is coded on multiple lines but gets printed on a single line.
+# print('Text on multiple '
+#       'lines with no '
+#       'spaces.')
 
 # -------------------------------------------------
 
 # Concatenating, Indexing, and Slicing
 
 # 1. Create a string and print its length using len().
+# example_string = "This is a string!"
+# print(len(example_string))
 
 # 2. Create two strings, concatenate them, and print the resulting string.
+# string1 = "The cow flew over "
+# string2 = "the moon."
+# print(string1 + string2)
 
 # 3. Create two strings, use concatenation to add a space between them, and print the result.
+# string1 = "The cow flew over"
+# string2 = "the moon."
+# print(string1 + " " + string2)
 
 # 4. Print the string "zing" by using slice notation to specify the correct range of characters in the string "bazinga".
+# characters = "bazinga"
+# print(characters[2:6])
 
 # -------------------------------------------------
 
 # 1. Write a program that converts the following strings to lowercase. "Animals", "Badger", "Honey Bee", "Honey Badger". Print each lower-case string on a separate line.
+# words = "Animals", "Badger", "Honey Bee", "Honey Badger"
+# for word in words:
+#     print(word.lower())
 
 # 2. Repeat exercise 1, but convert each string to uppercase instead of lowercase.
+# words = "Animals", "Badger", "Honey Bee", "Honey Badger"
+# for word in words:
+#     print(word.upper())
 
 # 3. Write a program that removes whitespace from the following strings, then print out the strings with the whitespace removed:
-
 # string1 = "  Filet Mignon"
 # string2 = "Brisket  "
 # string3 = "  Cheeseburger  "
 
-# 4. Write a program that prints out the result of .startswith("be") on each of the following strings.
+# print(f"{string1.lstrip()}, {string2.rstrip()}, and {string3.strip()}")
 
+# 4. Write a program that prints out the result of .startswith("be") on each of the following strings.
 # string1 = "Becomes"
 # string2 = "becomes"
 # string3 = "BEAR"
 # string4 = " bEautiful"
 
+# print(f"{string1.startswith("be")}, {string2.startswith("be")}, {string3.startswith("be")}, and {string4.startswith("be")}")
+
 # 5. Using the same four strings from #4, write a program that uses string methods to alter each string so that .startswith("be") returns True for all of them.
+# string1 = "Becomes"
+# string2 = "becomes"
+# string3 = "BEAR"
+# string4 = " bEautiful"
+
+# print(f"{string1.lower().startswith("be")}, {string2.startswith("be")}, {string3.lower().startswith("be")}, and {string4.lower().strip().startswith("be")}")
 
 # -------------------------------------------------
 
 # Interacting with User Input
 
 # 1. Have a program display user input.
+# name = input("Enter your name: ")
+# print("Hello, " + name + "!")
 
 # 2. Have a program display user input in lowercase.
+# name = input("Enter your name: ")
+# print("Hello, " + name.lower() + "!")
 
 # 3. Have a program display the number of characters in the input.
+# name = input("Enter your name: ")
+# print(len(name))
 
 # -------------------------------------------------
 

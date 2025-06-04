@@ -1,5 +1,5 @@
 # 4.7 - Streamline Your Prints
-# Solutions to review exercies
+# Solutions to review exercises
 
 
 # Exercise 1

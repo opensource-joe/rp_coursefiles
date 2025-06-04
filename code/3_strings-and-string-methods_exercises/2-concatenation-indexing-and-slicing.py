@@ -1,5 +1,5 @@
 # 4.2 - Concatenation, Indexing, and Slicing
-# Solutions to review exercies
+# Solutions to review exercises
 
 
 # Exercise 1

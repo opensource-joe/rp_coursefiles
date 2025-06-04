@@ -1,5 +1,5 @@
 # 4.8 - Find a String in a String
-# Solutions to review exercies
+# Solutions to review exercises
 
 
 # Exercise 1

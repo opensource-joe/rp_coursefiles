@@ -1,5 +1,5 @@
 # 4.6 - Working with Strings and Numbers
-# Solutions to review exercies
+# Solutions to review exercises
 
 
 # Exercise 1

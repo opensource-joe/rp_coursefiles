@@ -89,8 +89,12 @@
 # name = input("Enter your name: ")
 # print(len(name))
 
+# 4. Pick apart the user's input. Write a program that prompts the user with the string "Tell me your password: ". The program should then determine the first letter of the user's input, convert that letter to uppercase, and display it back.
+# password = input("Tell me your password: ")
+# first_letter = password[0].upper()
+# print(f"The first letter of your password is: {first_letter}")
+
 # -------------------------------------------------
-# TODO: Complete the exercises below
 # Working with Strings and Numbers
 
 # 1. Create a string containing an integer, then convert that string into an actual integer object using int(). Test the new object is a number by multiplying it by another number and displaying the result.

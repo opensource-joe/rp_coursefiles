@@ -99,11 +99,30 @@
 
 # 1. Create a string containing an integer, then convert that string into an actual integer object using int(). Test the new object is a number by multiplying it by another number and displaying the result.
 
+# number_string = "6"
+# number_int = int(number_string)
+# print(number_int)
+# print(number_int * 2)
+
 # 2. Repeat the previous exercise, but use a floating-point number and float().
+
+# number_string = "6.2"
+# number_int = float(number_string)
+# print(number_int)
+# print(number_int * 2)
 
 # 3. Create a string object and an integer object, then display them side by side with a single print using str().
 
+# word = "string"
+# number = 6
+# print(word + str(number))
+
 # 4. Write a program that uses input() twice to get two numbers from the user, multiplies the numbers together, and displays the result. Example: The product of 2 and 4 is 8.0.
+
+# number1 = int(input("Provide the first number "))
+# number2 = int(input("Provide the second number "))
+# result = number1 * number2
+# print(f"The product of {number1} and {number2} is {float(result)}.")
 
 # -------------------------------------------------
 
@@ -111,9 +130,15 @@
 
 # 1. Create a float object named weight with the value 0.2, and create a string object named animal with the value "newt". Use these objects to print the following string using only string concatenation: 0.2 kg is the weight of a newt.
 
+# weight = 0.2
+# animal = "newt"
+# print(str(weight) + " is the weight of a " + animal + ".")
+
 # 2. Display the same string by using .format() and empty {} placeholders.
+# print("{} is the weight of a {}.".format(weight, animal))
 
 # 3. Display the same string by using f-strings.
+# print(f"{weight} is the weight of a {animal}.")
 
 # -------------------------------------------------
 
@@ -121,9 +146,18 @@
 
 # 1. In one line of code, display the result of trying to .find() the sub-string "a" in the string "AAA". The result should be -1.
 
+# print("AAA".find("a"))
+
 # 2. Replace every occurrence of the character "s" with "x" in the string "Somebody said something to Samantha".
 
+# print("Somebody said something to Samantha".replace("s", "x"))
+
 # 3. Write a program that accepts user input with input() and displays the result of trying to .find() a particular letter in that input.
+# letter = input("Enter a letter to find: ")
+# phrase = input("Enter a phrase: ")
+# print(phrase.find(letter))
+
+# -------------------------------------------------
 
 # Challenge: Turn Your User Into an L33t H4xOr
 # 1. Write a program called translate.py that asks the user for some input with the following prompt: Enter some text:
@@ -138,3 +172,17 @@
 # The letter t becomes 7
 
 # 3. The program should then display the resulting string as output. Enter some text: I like to eat eggs and spam. I 1ik3 70 347 3gg5 4nd 5pm4m.
+
+# phrase = input("Enter some text (e.g., 'I like to eat eggs and spam'): ")
+# leet_dict = {
+#     'a': '4',
+#     'b': '8',
+#     'e': '3',
+#     'l': '1',
+#     'o': '0',
+#     's': '5',
+#     't': '7'
+# }
+# for key, value in leet_dict.items():
+#     phrase = phrase.replace(key, value)
+# print(phrase)

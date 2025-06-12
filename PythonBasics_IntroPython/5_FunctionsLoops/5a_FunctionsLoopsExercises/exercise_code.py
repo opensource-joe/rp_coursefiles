@@ -83,5 +83,13 @@
 
 # 3. Prompt user to enter amounts and call the function to display values entered by the user.
 
-# TODO: Start here
-# https://realpython.com/lessons/write-investment-program/
+def invest(amount, rate, years):
+    for year in range(1, years + 1):
+        amount = amount * (1 + rate)
+        print(f"year {year}: ${amount:.2f}")
+
+amount = float(input("Please enter the amount (100): "))
+rate = float(input("Please enter the rate (.05): "))
+years = int(input("Please enter the number of years (4): "))
+
+invest(amount, rate, years)

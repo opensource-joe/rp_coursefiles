@@ -1,0 +1,3 @@
+# Run in an infinite loop until the user types "q" or "Q"
+while (user_input := input("type: ")).lower() != "q":
+    ...

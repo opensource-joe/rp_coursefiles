@@ -177,8 +177,138 @@ Python says flat is better than nested. Can simplify or flatten with refactoring
 
 ## Breaking Out of the Pattern
 
+- Bringing loops into the mix.
+
+```python
+sum_of_events = 0
+
+for n in range(10):
+    if n % 2 == 0: #check to see if number is evenly divisible
+        sum_of_evens = sum_of_evens + n
+
+print(sum_of_events)
+```
+
+- Using the Break keyword. Use to stop While loop from running forever.
+
+```python
+for n in range(4):
+    if n == 2: 
+        break
+    print(n)
+```
+
+- Using the Continue keyword. Will continue printing 2 and then the numbers that follow.
+
+```python
+for n in range(4):
+    if n == 2:
+        print("there goes two")
+        continue
+    print(n)
+```
+
+```python
+n = 0
+
+while True:
+    print(n)
+    if n < 5:
+        n = n + 1
+        continue
+    else:
+        break
+    print("end of loop")
+
+```
+
 ## Recovering From Errors
 
-## Using the try and except Keywords
+Types of errors and exceptions.
+- SyntaxError
+    - ValueError
+    - TypeError
+    - NameError
+    - ZeroDivisionError
+    - OverflowError
+
+## Using the Try and Except Keywords
+
+Use the Try...Except structure to handle exceptions gracefully.
+
+```python
+try:
+    number = int(input("Enter an integer: "))
+except ValueError:
+    print("That was not an integer")
+```
+
+```python
+def divide(num1, num2):
+    try:
+        print(num1 / num2)
+    except TypeError:
+        print("Both arguments must be numbers")
+    except ZeroDivisionError:
+        print("num2 must not be 0")
+```
 
 ## Simulating and Calculating Probabilities
+
+Use the random module, simulate many coin tosses, calculate the ratio of heads to tails, and alter the behavior of the coin.
+
+    import random
+    random.randint(1, 10)
+
+```python
+import random
+
+def coin_flip():
+    # randomly return 'heads' or 'tails'
+    if random.randint(0, 1) == 0:
+        return "heads"
+    else:
+        return "tails" 
+
+for i in range(10):
+    print(coin_flip())
+```
+
+Unfair coins. Replace coin_flip() with this for probability.
+
+```python
+import random
+
+def unfair_coin_flip(probability_of_tails):
+    if random.random() < probability_of_tails:
+        return "tails"
+    else:
+        return "heads"
+```
+
+```python
+heads_tally = 0
+tails_tally = 0
+
+for trial in range(10_000):
+    if coin_flip() == "heads":
+        heads_tally = heads_tally + 1
+    else:
+        tails_tally = tails_tally + 1
+
+print("heads", heads_tally)
+print("tails", tails_tally)
+```
+
+### Quiz
+1. Write a Python if … else statement in the code box below that sets the variable m to the smaller of a and b.
+
+```python
+a = 100
+b = 50
+
+if a < b:
+    m = a
+else:
+    m = b
+```

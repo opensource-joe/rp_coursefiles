@@ -147,4 +147,115 @@ Can use tuples to return multiple values of a function.
 
 ### Think of Lists as Lists
 
+What is a list?
+- A list is an ordered, mutable sequence of values.
+- Each element is separated by a comma.
+- All elements are surrounded by a pair of square brackets.
+- Example: [1, 2, 3]
 
+Lists are similar to tuples Both:
+- Can contain items of any data type.
+- Are Indexed by integers starting at 0.
+- Support slice notation.
+- Support `in` to check for the existence of elements.
+- Are iterable.
+
+Lists are different from tuples because they are mutable. You can change elements in a list after you've created it.
+
+```python
+numbers = [1, 2, 3]
+numbers[0] = "One"
+
+numbers #returns ['One', 2, 3]
+```
+
+### Create Lists
+
+- List literal: [1, 2, 3]
+- Built-in list(): list(<sequence>)
+- String method .split(): str.split(<separator>)
+    - Can say where to split the string. Most common way is on a whitespace.
+
+```python
+"The quick brown fox".split() #will split the str on whitespaces.
+```
+
+### Work with Lists
+
+Indexing:
+`numbers = [1, 2, 3, 4]`
+`numbers[1]`
+
+Slicing:
+`numbers[1:2]`
+
+Membership testing:
+`2 in numbers`
+`"Bob" in numbers`
+
+Iteration:
+```python
+numbers = [1, 2, 3, 4]
+
+for number in numbers:
+    if number % 2 == 0:
+        print(number)
+```
+
+### Change Elements in a List
+
+```python
+numbers = [1, 2, 3]
+numbers[1] = 20 #prints [1, 20, 3]
+
+numbers[1:] = [200, 300, 400] #prints [1, 200, 300, 400]
+```
+
+### Adding and Removing Elements
+
+- .insert(i, x): pass index where to insert element, then the element.
+- .append(x): pass as argument and it adds to end of the list.
+- .extend(<iterable>): pass an argument as an iterable and adds to end of list. Add more than one element.
+- .pop(i): pass an index to remove an element from the list. Don't pass the index, it will take off the last element.
+
+### Working with Lists of Numbers
+
+You can perform mathematical operations on collections using built-in functions:
+- sum(): adds all items in a collection.
+- min()
+- max()
+
+### Create List Comprehensions
+
+```python
+numbers = (1, 2, 3)
+
+squares = []
+for number in numbers:
+    squares.append(number**2)
+```
+
+Python has list comprehensions to do what last three lines of code completed. A list comprehension is shorthand for a for loop.
+
+```python
+squares = [num**2 for number in numbers]
+```
+
+### Nesting Lists
+
+Nested collection is a list inside of a list. Can also nest tuples.
+
+    maori_words = [
+        ["whāna", "family],
+        ["kai", "food"],
+        ["aroha", "love"]
+    ]
+
+Access using double index notation.
+
+    maori_words[2][0] #returns 'aroha'
+    maori_words[2][1] #returns 'love'
+
+You can nests lists as deeply as you want to but don't do it unless you have a good reason.
+
+### Create a Second Reference to a List Object

@@ -259,3 +259,85 @@ Access using double index notation.
 You can nests lists as deeply as you want to but don't do it unless you have a good reason.
 
 ### Create a Second Reference to a List Object
+
+Copying lists. Variable names are references to objects in memory.
+
+```python
+matrix = [[1, 2], [3, 4]]
+
+the_matrix = matrix
+the matrix[-1] = ["Neo", "Trinity"]
+
+the_matrix #returns [[1, 2], ['Neo', 'Trinity']]
+matrix #returns [[1, 2], ['Neo', 'Trinity']]
+
+# Both variables point to the same object. Find an element object identifier with id(<element>).
+```
+
+### Create a Shallow Copy of a List
+
+Shallow copies reference to objects but not that actual objects.
+
+```python
+the_matrix = matrix[:] # makes a shallow copy of the matrix list and assigns a new object ID.
+
+id(matrix)
+```
+
+### Create a Deep Copy of a List
+
+Only deep copy creates a truly independent copy of an object. Use import copy.
+
+```python
+import copy
+
+matrix = [[1, 2], [3, 4]]
+the_matrix = copy.deepcopy(matrix)
+the_matrix[0][0] = "The Oracle"
+
+the_matrix # produces updated list with "The Oracle"
+maxrix # keeps original list objects
+```
+Only with deep copy can you truly make an independent copy of an object.
+
+### Sort Lists
+
+Use .sort() method.
+
+```python
+colors = ["red", "yellow", "green", "blue"]
+colors.sort() # sorts the list in alphabetical order because it's strings. Can do same with numbers for ordering.
+```
+Lists with strings sort with unicode code points.
+
+Can use .sort(reverse=True) to sort in reverse order.
+
+### Pass Built-in Function for Sorting
+
+Can pass key to a function for sorting.
+
+```python
+colors = ["red", "yellow", "green", "blue"]
+colors.sort(key=len)
+```
+The .sort() method accepts a function as an argument to `key`. You can use it to customize how to sort even further. 
+
+Two things to keep in mind.
+1. Pass the object without calling it.
+2. The function that you pass to `key` must accept only a single argument.
+
+### Usa a Custom Function for Sorting
+
+Can use user defined functions for sorting. 
+
+```python
+def get_second_element(item):
+    return item[1]
+
+items = [(10, 2), (0, 3), (10, 1)]
+items.sort(key=get_second_element)
+
+items # returns list in [(10, 1), (-10, 2), (0, 3)] order
+```
+
+This is list method and doesn't work on tuples because they are immutable.
